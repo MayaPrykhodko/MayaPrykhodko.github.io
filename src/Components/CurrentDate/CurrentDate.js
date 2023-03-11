@@ -14,7 +14,7 @@ import React, { useState, useEffect }  from "react";
   
     return (
       <div className="current-date">
-         <img src="../favicon.ico" alt="weather-icon"/>
+         <img src="./icon.png" alt="weather-icon"/>
         {currentDate}
       </div>
     );
