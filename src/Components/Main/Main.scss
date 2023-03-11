@@ -1,0 +1,71 @@
+.Main {
+    margin-top: 7%;
+    width: 1100px;
+    height: 800px;
+    z-index: 1;
+}
+
+button {
+    height: 40px;
+    width: 40px;
+    background-image: url("./sun.png");
+    background-size: contain;
+    cursor: pointer;
+}
+
+@media (max-width:1200px) {
+    .Main {
+        width: 800px;
+        height: 800px;
+    }
+
+    button {
+        height: 35px;
+        width: 35px;
+    }
+}
+
+@media (max-width:950px) {
+    .Main {
+        width: 700px;
+    }
+}
+
+@media (max-width:768px) {
+    .Main {
+        margin-top: 15%;
+        width: 600px;
+    }
+}
+
+@media (max-width:650px) {
+    .Main {
+        margin-top: 15%;
+        width: 500px;
+    }
+}
+
+@media (max-width:570px) {
+
+    .Main {
+        margin-top: 25%;
+        width: 400px;
+    }
+
+    button {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Main {
+        width: 380px;
+    }
+}
+
+@media (max-width: 410px) {
+    .Main {
+        width: 300px;
+    }
+}

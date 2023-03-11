@@ -1,0 +1,216 @@
+.Home-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0px 90px 0px 90px;
+
+
+    .current-date {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .city-data {
+        display: flex;
+        gap: 250px;
+        height: 500px;
+
+        .city-list,
+        .city-weather,
+        .city-weather-icons {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .city-title,
+        .city-temperature {
+            font-size: 42px;
+        }
+
+        .city-weather__item img {
+            width: 90px;
+            height: 80px;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+
+    .Home-wrapper {
+        padding: 0px 40px 0px 40px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .city-data {
+            gap: 180px;
+
+            .city-title,
+            .city-temperature {
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+@media (max-width:950px) {
+    .Home-wrapper {
+        .city-data {
+            gap: 130px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .Home-wrapper {
+        .city-data {
+            gap: 80px;
+
+            .city-title,
+            .city-temperature {
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+@media (max-width:650px) {
+    .Home-wrapper {
+        padding: 0px 30px 0px 30px;
+
+        .city-data {
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 0;
+
+            .city-list,
+            .city-weather,
+            .city-weather-icons {
+                flex-direction: row;
+                text-align: center;
+                width: 440px;
+            }
+
+            .city-title {
+                width: 130px;
+            }
+
+            .city-temperature {
+                font-size: 30px;
+                width: 130px;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .Home-wrapper {
+        padding: 0px;
+
+        .current-date {
+            width: 100%;
+            justify-content: center;
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .city-data {
+            justify-content: center;
+            gap: 100px;
+
+            .city-list,
+            .city-weather,
+            .city-weather-icons {
+                width: 400px;
+                justify-content: space-around;
+            }
+
+            .city-title {
+                width: 100px;
+                font-size: 24px;
+            }
+
+            .city-temperature {
+                font-size: 18px;
+                width: 100px;
+            }
+
+            .city-cloudiness {
+                font-size: 15px;
+            }
+
+            .city-weather__item img {
+                width: 80px;
+                height: 70px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .Home-wrapper {
+
+        .city-data {
+
+            .city-list,
+            .city-weather,
+            .city-weather-icons {
+                width: 380px;
+            }
+
+            .city-title {
+                width: 90px;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .Home-wrapper {
+
+        .city-data {
+            gap: 90px; 
+
+            .city-list,
+            .city-weather,
+            .city-weather-icons {
+                width: 300px;
+            }
+
+            .city-title {
+                width: 75px;
+                font-size: 18px;
+            }
+
+            .city-temperature {
+                font-size: 14px;
+                width: 70px;
+            }
+
+            .city-cloudiness {
+                font-size: 13px;
+            }
+
+            .city-weather__item img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+}
