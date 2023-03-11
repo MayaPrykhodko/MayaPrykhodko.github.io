@@ -10,11 +10,11 @@
         display: flex;
         align-items: center;
         gap: 10px;
-    }
 
-    img {
-        width: 60px;
-        height: 60px;
+        img {
+            width: 60px;
+            height: 60px;
+        }
     }
 
     .city-data {
@@ -47,10 +47,12 @@
     .Home-wrapper {
         padding: 0px 40px 0px 40px;
 
-        img {
-            width: 50px;
-            height: 50px;
-        }
+        // .current-date {
+        //     img {
+        //         width: 50px;
+        //         height: 50px;
+        //     }
+        // }
 
         .city-data {
             gap: 180px;
@@ -185,7 +187,7 @@
     .Home-wrapper {
 
         .city-data {
-            gap: 90px; 
+            gap: 90px;
 
             .city-list,
             .city-weather,

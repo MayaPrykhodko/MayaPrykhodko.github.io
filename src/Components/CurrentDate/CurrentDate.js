@@ -1,4 +1,5 @@
 import React, { useState, useEffect }  from "react";
+import icon from "./icon.png";
 
  export default function CurrentDate() {
     const [currentDate, setCurrentDate] = useState("");
@@ -14,7 +15,7 @@ import React, { useState, useEffect }  from "react";
   
     return (
       <div className="current-date">
-         <img src="./icon.png" alt="weather-icon"/>
+         <img src={icon} alt="weather-icon"/>
         {currentDate}
       </div>
     );
