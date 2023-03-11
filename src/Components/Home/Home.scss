@@ -47,12 +47,12 @@
     .Home-wrapper {
         padding: 0px 40px 0px 40px;
 
-        // .current-date {
-        //     img {
-        //         width: 50px;
-        //         height: 50px;
-        //     }
-        // }
+        .current-date {
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
 
         .city-data {
             gap: 180px;
@@ -172,12 +172,11 @@
             .city-list,
             .city-weather,
             .city-weather-icons {
-                width: 380px;
+                min-width: 100%;
             }
 
-            .city-title {
-                width: 90px;
-                font-size: 22px;
+            .city-title, .city-temperature{
+                width: 130px;
             }
         }
     }
@@ -189,20 +188,15 @@
         .city-data {
             gap: 90px;
 
-            .city-list,
-            .city-weather,
-            .city-weather-icons {
-                width: 300px;
-            }
 
             .city-title {
-                width: 75px;
-                font-size: 18px;
+                width: 90px;
+                font-size: 20px;
             }
 
             .city-temperature {
                 font-size: 14px;
-                width: 70px;
+                width: 90px;
             }
 
             .city-cloudiness {
