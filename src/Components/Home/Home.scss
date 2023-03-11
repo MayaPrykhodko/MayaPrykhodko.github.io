@@ -166,6 +166,8 @@
 @media (max-width: 480px) {
 
     .Home-wrapper {
+        height: 650px;
+        margin-bottom: 0;
 
         .city-data {
 
@@ -187,8 +189,6 @@
 
         .city-data {
             gap: 90px;
-            height: 520px;
-
 
             .city-title {
                 width: 100px;
