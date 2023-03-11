@@ -142,8 +142,7 @@
             }
 
             .city-title {
-                width: 100px;
-                font-size: 24px;
+                font-size: 28px;
             }
 
             .city-temperature {
@@ -189,19 +188,6 @@
 
         .city-data {
             gap: 90px;
-
-            .city-title {
-                width: 100px;
-            }
-
-            .city-temperature {
-                font-size: 14px;
-                width: 90px;
-            }
-
-            .city-cloudiness {
-                font-size: 13px;
-            }
 
             .city-weather__item img {
                 width: 70px;
