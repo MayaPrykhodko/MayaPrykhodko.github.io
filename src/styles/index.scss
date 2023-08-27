@@ -1,0 +1,145 @@
+$height: 100%;
+$background-size: cover;
+
+* {
+    box-sizing: border-box;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background: linear-gradient(to right, rgba(49, 50, 54, 0.4), rgba(4, 7, 18, 0.8)), url("./pictures/sky.png");
+    background-size: $background-size;
+}
+
+.umbrella-wrapper {
+    display: flex;
+    gap: 10px;
+    width: 95%;
+    height: $height;
+    position: absolute;
+}
+
+.umbrella {
+    top: 0;
+    width: 70px;
+    height: 70px;
+}
+
+.umbrella_color_orange {
+    background: url("../styles/pictures/umbrella-orange.png");
+    background-size: $background-size;
+    animation: drop 9s linear infinite;
+}
+
+.umbrella_color_red {
+    background: url("../styles/pictures/umbrella-red.png");
+    background-size: $background-size;
+    animation: drop 8s linear infinite;
+}
+
+.umbrella_color_yellow {
+    background: url("../styles/pictures/umbrella-yellow.png");
+    background-size: $background-size;
+    animation: drop 10s linear infinite;
+}
+
+.rain {
+    position: absolute;
+    width: 50%;
+    height: $height;
+    top: 0;
+    right: 0;
+}
+
+.drop {
+    position: absolute;
+    bottom: 100%;
+    width: 15px;
+    height: 120px;
+    pointer-events: none;
+    animation: drop 6s infinite linear;
+}
+
+.stem {
+    width: 1px;
+    height: $height;
+    margin-left: 7px;
+    background: linear-gradient(to bottom, rgba(39, 38, 38, 0), rgba(255, 255, 255, 0.25));
+    animation: stem 6s infinite linear;
+}
+
+.splat {
+    width: 15px;
+    height: 10px;
+    border-radius: 50%;
+    border-top: 2px dotted rgba(255, 255, 255, 0.5);
+    opacity: 1;
+    transform: scale(0);
+    animation: splat 6s infinite linear;
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(0vh);
+    }
+
+    75% {
+        transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes stem {
+    0% {
+        opacity: 1;
+    }
+
+    65% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes splat {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+    90% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+@media (max-width:768px) {
+    .umbrella {
+        width: 60px;
+        height: 60px;
+    }
+}
