@@ -21,4 +21,9 @@ button {
     height: 30px;
     width: 30px;
   }
+}
+@media (max-width: 480px) {
+  button {
+    transform: translateY(5px);
+  }
 }/*# sourceMappingURL=Main.css.map */

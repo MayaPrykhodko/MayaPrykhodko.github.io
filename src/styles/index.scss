@@ -14,6 +14,7 @@ $background-size: cover;
     margin: 0;
     background: linear-gradient(to right, rgba(49, 50, 54, 0.4), rgba(4, 7, 18, 0.8)), url("./pictures/sky.png");
     background-size: $background-size;
+    background-position: center bottom;
 }
 
 .umbrella-wrapper {
@@ -33,19 +34,19 @@ $background-size: cover;
 .umbrella_color_orange {
     background: url("../styles/pictures/umbrella-orange.png");
     background-size: $background-size;
-    animation: drop 9s linear infinite;
+    animation: drop-umbrella 9s linear infinite;
 }
 
 .umbrella_color_red {
     background: url("../styles/pictures/umbrella-red.png");
     background-size: $background-size;
-    animation: drop 8s linear infinite;
+    animation: drop-umbrella 8s linear infinite;
 }
 
 .umbrella_color_yellow {
     background: url("../styles/pictures/umbrella-yellow.png");
     background-size: $background-size;
-    animation: drop 10s linear infinite;
+    animation: drop-umbrella 10s linear infinite;
 }
 
 .rain {
@@ -137,7 +138,26 @@ $background-size: cover;
     }
 }
 
+@keyframes drop-umbrella {
+    0% {
+        transform: translateY(0vh);
+    }
+
+    75% {
+        transform: translateY(100vh);
+    }
+
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
 @media (max-width:768px) {
+    #root {
+        background-position: center center;
+    }
+    
     .umbrella {
         width: 60px;
         height: 60px;

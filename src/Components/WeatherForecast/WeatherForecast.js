@@ -107,7 +107,7 @@ const WeatherForecast = ({ forecastData }) => {
         <div className="right-panel">
           {Object.entries(selectedDateDetails.hours).map(([hour, details]) => (
               <div className="forecast-hourly" key={hour}>
-                <div className="hour">{hour}</div>
+                <div className="hour">{hour.slice(0,5)}</div>
                 <div className="temperature">{Math.round(details.temp - 273.15)}°</div>
                 <div className="humidity">{details.humidity}</div>
                 <div className="wind">{details.wind}</div>

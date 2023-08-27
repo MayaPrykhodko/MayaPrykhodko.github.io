@@ -95,7 +95,6 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   border: 2px dotted rgb(240, 161, 5);
   background-color: rgba(39, 126, 179, 0.59);
   padding: 5px;
@@ -122,8 +121,8 @@ img {
 
 .right-panel {
   display: flex;
-  justify-content: space-between;
   flex-basis: 80%;
+  gap: 30px;
 }
 
 .forecast-hourly {
@@ -149,6 +148,9 @@ img {
   .forecast {
     width: 60vw;
   }
+  .forecast__body {
+    font-size: 0.7692307692em;
+  }
 }
 @media (max-width: 950px) {
   .city-data {
@@ -164,13 +166,6 @@ img {
     flex-direction: column;
     gap: 15px;
   }
-  .city-data {
-    gap: 80px;
-  }
-  .city-data .city-title,
-.city-data .city-temperature {
-    font-size: 32px;
-  }
   .search-city {
     width: 100%;
   }
@@ -183,14 +178,25 @@ img {
   .search-city #form .city-search i {
     left: 15%;
   }
+  .city-data {
+    gap: 80px;
+  }
+  .city-data .city-title,
+.city-data .city-temperature {
+    font-size: 32px;
+  }
+  .right-panel {
+    gap: 20px;
+  }
 }
 @media (max-width: 650px) {
   .Home-wrapper {
     padding: 0px 30px 0px 30px;
+    gap: 50px;
   }
   .city-data {
+    height: 40vh;
     flex-direction: column;
-    justify-content: space-around;
     gap: 20px;
   }
   .city-data .city-list,
@@ -223,9 +229,9 @@ img {
     height: 40px;
   }
   .city-data {
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 30px;
+    gap: 0px;
     width: 75vw;
   }
   .city-data .city-list,
@@ -255,18 +261,20 @@ img {
   .forecast {
     width: 70vw;
     align-items: center;
+    gap: 50px;
   }
 }
 @media (max-width: 480px) {
   .Home-wrapper {
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 65vh;
   }
   .Home-wrapper .city-data {
+    height: 70vh;
     width: 80vw;
-    justify-content: space-around;
-    gap: 0px;
+    justify-content: flex-start;
+    gap: 40px;
   }
   .Home-wrapper .city-data .city-title {
     width: 90px;
@@ -274,5 +282,9 @@ img {
   }
   .forecast {
     gap: 50px;
+    width: 90vw;
+  }
+  .right-panel {
+    gap: 10px;
   }
 }/*# sourceMappingURL=Home.css.map */
