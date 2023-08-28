@@ -88,8 +88,14 @@ const WeatherForecast = ({ forecastData }) => {
                   <span className="max-temp-title">max</span>
                 </div>
                 <div className="temperature__data">
-                  <span className="min-temp">{Math.round(averageMinTemp)}°</span>
-                  <span className="max-temp">{Math.round(averageMaxTemp)}°</span>
+                  <span className="min-temp">
+                    {averageMinTemp !== 0 ? (averageMinTemp > 0 ? "+" : "-") : ""}
+                    {Math.round(averageMinTemp)}°
+                  </span>
+                  <span className="max-temp">
+                    {averageMaxTemp !== 0 ? (averageMaxTemp > 0 ? "+" : "-") : ""}
+                    {Math.round(averageMaxTemp)}°
+                  </span>
                 </div>
               </div>
               <div className="description">{data.description}</div>
@@ -106,13 +112,16 @@ const WeatherForecast = ({ forecastData }) => {
         </div>
         <div className="right-panel">
           {Object.entries(selectedDateDetails.hours).map(([hour, details]) => (
-              <div className="forecast-hourly" key={hour}>
-                <div className="hour">{hour.slice(0,5)}</div>
-                <div className="temperature">{Math.round(details.temp - 273.15)}°</div>
-                <div className="humidity">{details.humidity}</div>
-                <div className="wind">{details.wind}</div>
-              </div>
-            ))
+            <div className="forecast-hourly" key={hour}>
+              <div className="hour">{hour.slice(0, 5)}</div>
+              <div className="temperature">
+              {details.temp - 273.15 !== 0 ? (details.temp - 273.15 > 0 ? "+" : "-") : ""}
+                {Math.abs(Math.round(details.temp - 273.15))}°
+                </div>
+              <div className="humidity">{details.humidity}</div>
+              <div className="wind">{details.wind}</div>
+            </div>
+          ))
           }
         </div>
       </div>

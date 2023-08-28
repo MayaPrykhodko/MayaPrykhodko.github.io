@@ -69,9 +69,9 @@ export default function Home() {
       </div>
       <div className="city-data">
         {isSubmit ?
-          <WeatherForecast 
-          forecastData={cityData}
-          /> 
+          <WeatherForecast
+            forecastData={cityData}
+          />
           :
           <>
             <div className="city-list">
@@ -83,8 +83,12 @@ export default function Home() {
               <div className="city-weather__item">
                 <div className="city-temperature">
                   {kyivData.main &&
-                    kyivData.main.temp &&
-                    `${Math.round(kyivData.main.temp - 273.15)}°C`}
+                    kyivData.main.temp && (
+                      <span>
+                        {kyivData.main.temp - 273.15 !== 0 ? (kyivData.main.temp - 273.15 > 0 ? "+" : "-") : ""}
+                        {Math.abs(Math.round(kyivData.main.temp - 273.15))}°C
+                      </span>
+                    )}
                 </div>
                 <div className="city-cloudiness">{kyivData.weather &&
                   kyivData.weather[0].description}</div>
@@ -92,8 +96,12 @@ export default function Home() {
               <div className="city-weather__item">
                 <div className="city-temperature">
                   {londonData.main &&
-                    londonData.main.temp &&
-                    `${Math.round(londonData.main.temp - 273.15)}°C`}
+                    londonData.main.temp && (
+                      <span>
+                        {londonData.main.temp - 273.15 !== 0 ? (londonData.main.temp - 273.15 > 0 ? "+" : "-") : ""}
+                        {Math.abs(Math.round(londonData.main.temp - 273.15))}°C
+                      </span>
+                    )}
                 </div>
                 <div className="city-cloudiness">{londonData.weather &&
                   londonData.weather[0].description}</div>
@@ -101,8 +109,12 @@ export default function Home() {
               <div className="city-weather__item">
                 <div className="city-temperature">
                   {newYorkData.main &&
-                    newYorkData.main.temp &&
-                    `${Math.round(newYorkData.main.temp - 273.15)}°C`}
+                    newYorkData.main.temp && (
+                      <span>
+                        {newYorkData.main.temp - 273.15 !== 0 ? (newYorkData.main.temp - 273.15 > 0 ? "+" : "-") : ""}
+                        {Math.abs(Math.round(newYorkData.main.temp - 273.15))}°C
+                      </span>
+                    )}
                 </div>
                 <div className="city-cloudiness">{newYorkData.weather &&
                   newYorkData.weather[0].description}</div>
