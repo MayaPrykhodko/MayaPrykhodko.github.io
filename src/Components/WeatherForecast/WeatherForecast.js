@@ -90,11 +90,11 @@ const WeatherForecast = ({ forecastData }) => {
                 <div className="temperature__data">
                   <span className="min-temp">
                     {averageMinTemp !== 0 ? (averageMinTemp > 0 ? "+" : "-") : ""}
-                    {Math.round(averageMinTemp)}°
+                    {Math.abs(Math.round(averageMinTemp))}°
                   </span>
                   <span className="max-temp">
                     {averageMaxTemp !== 0 ? (averageMaxTemp > 0 ? "+" : "-") : ""}
-                    {Math.round(averageMaxTemp)}°
+                    {Math.abs(Math.round(averageMaxTemp))}°
                   </span>
                 </div>
               </div>
